@@ -1,0 +1,764 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     30121,        756]
+NotebookOptionsPosition[     26591,        630]
+NotebookOutlinePosition[     27088,        650]
+CellTagsIndexPosition[     27045,        647]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Basic Cpp(C++) and Cmd/Terminal Usage Crash Course", "Section",
+ CellChangeTimes->{{3.6994454120332355`*^9, 3.699445442335306*^9}, {
+  3.6994454755214734`*^9, 3.699445477460807*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Downloads", "Subsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}}],
+
+Cell["\<\
+Mac\[CloseCurlyQuote]s include a cpp compiler in their operating system \
+however for a windows computer you will need to download one.
+I have found this version to work rather well.
+http://tdm-gcc.tdragon.net/download\
+\>", "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Cmd(Windows)", "Subsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+  3.699445846806976*^9}, {3.699446519791335*^9, 3.69944652715372*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Basic Commands", "Subsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+  3.699445865782161*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["help", "Subsubsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+   3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+   3.699445865782161*^9}, {3.699445904847884*^9, 3.6994459053370905`*^9}, 
+   3.6994460090784297`*^9}],
+
+Cell["This will display all possible/available commands", "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.699445560410188*^9, 3.699445569261406*^9}, {3.6994458038359985`*^9, 
+  3.6994459196756516`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["dir", "Subsubsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+  3.699445865782161*^9}, {3.699445904847884*^9, 3.69944592438803*^9}, {
+  3.6994460959467573`*^9, 3.6994460961912856`*^9}}],
+
+Cell["\<\
+This will display all files and folders in the current folder\
+\>", "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.699445560410188*^9, 3.699445569261406*^9}, {3.6994458038359985`*^9, 
+  3.699445921394148*^9}, {3.699446024327035*^9, 3.699446114329973*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["cd", "Subsubsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+  3.699445865782161*^9}, {3.699445904847884*^9, 3.69944592438803*^9}}],
+
+Cell[TextData[{
+ "open/enter a folder\n\nEx: opens \[OpenCurlyDoubleQuote]Documents\
+\[CloseCurlyDoubleQuote]\n",
+ StyleBox["cd Documents\n\n",
+  FontWeight->"Bold"],
+ "Ex: opens preceding folder ",
+ StyleBox["\ncd ..",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.699445560410188*^9, 3.699445569261406*^9}, {3.6994458038359985`*^9, 
+  3.699445921394148*^9}, {3.699446024327035*^9, 3.6994461160826254`*^9}, {
+  3.6994462825916777`*^9, 3.699446287285676*^9}, {3.6994464477133436`*^9, 
+  3.6994464563875904`*^9}, {3.6994464874802275`*^9, 3.699446497462336*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["mkdir", "Subsubsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+   3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+   3.699445865782161*^9}, {3.699445904847884*^9, 3.69944592438803*^9}, {
+   3.6994460156599474`*^9, 3.699446015781586*^9}, {3.699446135810961*^9, 
+   3.6994461376511664`*^9}, 3.6994462487018805`*^9}],
+
+Cell[TextData[{
+ "This will create a folder in the current folder\n\nEx: Creates a folder \
+named \[OpenCurlyDoubleQuote]Test\n",
+ StyleBox["mkdir Test",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+   3.699445560410188*^9, 3.699445569261406*^9}, {3.6994458038359985`*^9, 
+   3.699445921394148*^9}, {3.6994462749598927`*^9, 3.699446357884474*^9}, 
+   3.6994485913983316`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["del", "Subsubsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+   3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+   3.699445865782161*^9}, {3.699445904847884*^9, 3.69944592438803*^9}, {
+   3.6994460156599474`*^9, 3.699446015781586*^9}, {3.699446135810961*^9, 
+   3.6994461376511664`*^9}, 3.6994462487018805`*^9, {3.6994464142287426`*^9, 
+   3.699446414386484*^9}}],
+
+Cell[TextData[{
+ "delete a folder or file\n\nEx: deletes \[OpenCurlyDoubleQuote]Test\n",
+ StyleBox["del Test",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.699445560410188*^9, 3.699445569261406*^9}, {3.6994458038359985`*^9, 
+  3.699445921394148*^9}, {3.6994462749598927`*^9, 3.699446357884474*^9}, {
+  3.6994464182107844`*^9, 3.6994464379917192`*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Terminal(mac)", "Subsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+   3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+   3.699445853915794*^9}, 3.699446003667989*^9, {3.6994465305267916`*^9, 
+   3.699446535444337*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Basic Commands", "Subsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+  3.699445865782161*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["man (manual)", "Subsubsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+   3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+   3.699445865782161*^9}, {3.699445904847884*^9, 3.6994459053370905`*^9}, 
+   3.6994460090784297`*^9, {3.699446859108426*^9, 3.6994468617832127`*^9}}],
+
+Cell[TextData[{
+ "This will display all possible/available options for a command \n\nEx: \
+opens the manual on the command \[OpenCurlyDoubleQuote]man\
+\[CloseCurlyDoubleQuote]\n",
+ StyleBox["man man",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.699445560410188*^9, 3.699445569261406*^9}, {3.6994458038359985`*^9, 
+  3.6994459196756516`*^9}, {3.699446878296009*^9, 3.6994468879611835`*^9}, {
+  3.6994471771125803`*^9, 3.6994472013300037`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["ls", "Subsubsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+  3.699445865782161*^9}, {3.699445904847884*^9, 3.69944592438803*^9}, {
+  3.6994460959467573`*^9, 3.6994460961912856`*^9}, {3.699447121794244*^9, 
+  3.699447121904644*^9}}],
+
+Cell["\<\
+This will display all files and folders in the current folder\
+\>", "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.699445560410188*^9, 3.699445569261406*^9}, {3.6994458038359985`*^9, 
+  3.699445921394148*^9}, {3.699446024327035*^9, 3.699446114329973*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["cd", "Subsubsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+  3.699445865782161*^9}, {3.699445904847884*^9, 3.69944592438803*^9}}],
+
+Cell[TextData[{
+ "open/enter a folder\n\nEx: opens \[OpenCurlyDoubleQuote]Documents\
+\[CloseCurlyDoubleQuote]\n",
+ StyleBox["cd Documents\n\n",
+  FontWeight->"Bold"],
+ "Ex: opens preceding folder ",
+ StyleBox["\ncd ..",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.699445560410188*^9, 3.699445569261406*^9}, {3.6994458038359985`*^9, 
+  3.699445921394148*^9}, {3.699446024327035*^9, 3.6994461160826254`*^9}, {
+  3.6994462825916777`*^9, 3.699446287285676*^9}, {3.6994464477133436`*^9, 
+  3.6994464563875904`*^9}, {3.6994464874802275`*^9, 3.699446497462336*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["mkdir", "Subsubsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+   3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+   3.699445865782161*^9}, {3.699445904847884*^9, 3.69944592438803*^9}, {
+   3.6994460156599474`*^9, 3.699446015781586*^9}, {3.699446135810961*^9, 
+   3.6994461376511664`*^9}, 3.6994462487018805`*^9}],
+
+Cell[TextData[{
+ "This will create a folder in the current foder\n\nEx: Creates a folder \
+named \[OpenCurlyDoubleQuote]Test\n",
+ StyleBox["mkdir Test",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.699445560410188*^9, 3.699445569261406*^9}, {3.6994458038359985`*^9, 
+  3.699445921394148*^9}, {3.6994462749598927`*^9, 3.699446357884474*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["rm", "Subsubsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+   3.6994455424721956`*^9, 3.6994455561573167`*^9}, {3.6994458458320684`*^9, 
+   3.699445865782161*^9}, {3.699445904847884*^9, 3.69944592438803*^9}, {
+   3.6994460156599474`*^9, 3.699446015781586*^9}, {3.699446135810961*^9, 
+   3.6994461376511664`*^9}, 3.6994462487018805`*^9, {3.6994464142287426`*^9, 
+   3.699446414386484*^9}, {3.6994471586657352`*^9, 3.6994471590282927`*^9}}],
+
+Cell[TextData[{
+ "remove a folder or file\n\nEx: removes \[OpenCurlyDoubleQuote]Test\n",
+ StyleBox["rm Test",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.699445560410188*^9, 3.699445569261406*^9}, {3.6994458038359985`*^9, 
+  3.699445921394148*^9}, {3.6994462749598927`*^9, 3.699446357884474*^9}, {
+  3.6994464182107844`*^9, 3.6994464379917192`*^9}, {3.699447160724123*^9, 
+  3.6994471712411957`*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["1. Create a text document", "Subsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.699447233147789*^9, 3.699447239384723*^9}, {3.6994472727627287`*^9, 
+  3.6994472801564827`*^9}, {3.699447732357046*^9, 3.699447735699255*^9}}],
+
+Cell[TextData[{
+ "Start by using the ",
+ StyleBox["cd ",
+  FontWeight->"Bold"],
+ "command to navigate to the desired folder (the one that will contain your \
+project)\nuse ",
+ StyleBox["dir",
+  FontWeight->"Bold"],
+ "/",
+ StyleBox["ls",
+  FontWeight->"Bold"],
+ " to help locate yourself in your file tree.\nuse ",
+ StyleBox["mkdir",
+  FontWeight->"Bold"],
+ " to create a new folder.\ncreate a new text document.\nwindows:\t  ",
+ StyleBox["notepad \
+\[OpenCurlyDoubleQuote]filename.cpp\[CloseCurlyDoubleQuote] \t",
+  FontWeight->"Bold"],
+ "\t        //creates and then opens a file named with notepad \
+\[OpenCurlyDoubleQuote]filename\[CloseCurlyDoubleQuote]",
+ StyleBox["\n*",
+  FontWeight->"Bold"],
+ "make sure that you end the file with .c so that when we compile the program \
+the compiler recognizes it as a c++ code document",
+ StyleBox["\n\n",
+  FontWeight->"Bold"],
+ "mac:",
+ StyleBox["\t\ttouch \[OpenCurlyDoubleQuote]filename.cpp\
+\[CloseCurlyDoubleQuote]\t\t\t ",
+  FontWeight->"Bold"],
+ "//creates a blank file named \[OpenCurlyDoubleQuote]filename\
+\[CloseCurlyDoubleQuote]",
+ StyleBox["\n\t\topen -a textEdit \[OpenCurlyDoubleQuote]filename.cpp\
+\[CloseCurlyDoubleQuote]\t ",
+  FontWeight->"Bold"],
+ "//opens the file names \[OpenCurlyDoubleQuote]filename\
+\[CloseCurlyDoubleQuote] with textEdit\n",
+ StyleBox["*",
+  FontWeight->"Bold"],
+ "make sure that you end the file with .cpp so that when we compile the \
+program the compiler recognizes it as a c++ code document"
+}], "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.6994472835888367`*^9, 3.6994474621561804`*^9}, {3.6994475627583914`*^9, 
+  3.6994476671622515`*^9}, {3.69944769751033*^9, 3.699447710347049*^9}, {
+  3.6994483739434166`*^9, 3.6994484763226824`*^9}, {3.699448858312458*^9, 
+  3.6994488727444224`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["2. Hello World", "Subsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.699447233147789*^9, 3.699447239384723*^9}, {3.6994472727627287`*^9, 
+  3.6994472801564827`*^9}, {3.6994477381338587`*^9, 3.699447748916652*^9}}],
+
+Cell["\<\
+Now that we have a basic text editor open and a file has been created lets \
+write our first program in c++.\
+\>", "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.6994472835888367`*^9, 3.6994474621561804`*^9}, {3.6994475627583914`*^9, 
+  3.6994476671622515`*^9}, {3.69944769751033*^9, 3.699447710347049*^9}, {
+  3.6994477526517754`*^9, 3.699447774680254*^9}, {3.699448488465308*^9, 
+  3.699448491798568*^9}, {3.6994492723914394`*^9, 3.6994492759324365`*^9}}],
+
+Cell["\<\
+// my hello world program  \t\t//\[OpenCurlyDoubleQuote]//\
+\[CloseCurlyDoubleQuote] are deliminators, they can be used to create a \
+comment and not interfere with the actual code. When compiling the compiler \
+will ignore everything past the deliminators
+#include <iostream> \t\t\t// this is here to include a library that the \
+computer uses to print out outputs.
+
+main() \t\t\t\t// this is our main function upon execution the code starts here
+{ \t\t\t\t\t// this signifies the start of the function 
+\tstd::cout << \[OpenCurlyDoubleQuote]Hello World!\[CloseCurlyDoubleQuote];\t\
+// this is the main operation of the main function. it prints out the string \
+\[OpenCurlyDoubleQuote]Hello World!\[CloseCurlyDoubleQuote]
+\treturn 0; \t\t\t// while not explicitly necessary this tells us that the \
+program ran and exited properly thus returning a \[OpenCurlyDoubleQuote]0\
+\[CloseCurlyDoubleQuote]
+}\t\t\t\t\t// this signifies the start of the function \
+\>", "Text",
+ CellChangeTimes->{{3.699449286653634*^9, 3.6994495722484665`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["3. Compile", "Subsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.699447233147789*^9, 3.699447239384723*^9}, {3.6994472727627287`*^9, 
+  3.6994472801564827`*^9}, {3.6994477381338587`*^9, 3.699447748916652*^9}, {
+  3.699449586824842*^9, 3.699449590204113*^9}}],
+
+Cell["\<\
+We are now ready to compile the text document into something that the \
+computer can understand.\
+\>", "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.6994472835888367`*^9, 3.6994474621561804`*^9}, {3.6994475627583914`*^9, 
+  3.6994476671622515`*^9}, {3.69944769751033*^9, 3.699447710347049*^9}, {
+  3.6994477526517754`*^9, 3.699447774680254*^9}, {3.699448488465308*^9, 
+  3.699448491798568*^9}, {3.6994492723914394`*^9, 3.6994492759324365`*^9}, {
+  3.699449618286991*^9, 3.6994496346300993`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Windows", "Subsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.699447233147789*^9, 3.699447239384723*^9}, {3.6994472727627287`*^9, 
+  3.6994472801564827`*^9}, {3.6994477381338587`*^9, 3.699447748916652*^9}, {
+  3.699449586824842*^9, 3.699449605237547*^9}, {3.699449832904357*^9, 
+  3.6994498374432883`*^9}}],
+
+Cell[TextData[{
+ "In Cmd, inside the folder that contains our \[OpenCurlyDoubleQuote]main.c\
+\[CloseCurlyDoubleQuote] document execute the following command.",
+ StyleBox["\ng++ filename.cpp",
+  FontWeight->"Bold"],
+ "\t//this will use the program (a compiler) named g++ to output a file named \
+\[OpenCurlyDoubleQuote]a.exe\[CloseCurlyDoubleQuote] (a.exe is the default \
+name) that is compiled from the code located in the file called \
+\[OpenCurlyDoubleQuote]filename.cpp\[CloseCurlyDoubleQuote]"
+}], "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.6994472835888367`*^9, 3.6994474621561804`*^9}, {3.6994475627583914`*^9, 
+  3.6994476671622515`*^9}, {3.69944769751033*^9, 3.699447710347049*^9}, {
+  3.6994477526517754`*^9, 3.699447774680254*^9}, {3.699448488465308*^9, 
+  3.699448491798568*^9}, {3.6994492723914394`*^9, 3.6994492759324365`*^9}, {
+  3.699449618286991*^9, 3.69944980995792*^9}, {3.6994498421824503`*^9, 
+  3.699449848553585*^9}, {3.699449901366588*^9, 3.6994499021272807`*^9}, {
+  3.699449975069397*^9, 3.699450060177538*^9}, {3.6994508031231227`*^9, 
+  3.699450849869417*^9}, {3.6994570872471046`*^9, 3.699457096551176*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Mac", "Subsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.699447233147789*^9, 3.699447239384723*^9}, {3.6994472727627287`*^9, 
+  3.6994472801564827`*^9}, {3.6994477381338587`*^9, 3.699447748916652*^9}, {
+  3.699449586824842*^9, 3.699449605237547*^9}, {3.699449832904357*^9, 
+  3.6994498374432883`*^9}, {3.6994500438120155`*^9, 3.699450044094448*^9}}],
+
+Cell[TextData[{
+ "In terminal/Cmd, inside the folder that contains our \
+\[OpenCurlyDoubleQuote]filename.cpp\[CloseCurlyDoubleQuote] document execute \
+the following command.",
+ StyleBox["\ng++ -o main.c filename.cpp",
+  FontWeight->"Bold"],
+ "\t//this will use the program (a compiler) named g++ to output (-o) a file \
+named \[OpenCurlyDoubleQuote]main.c\[CloseCurlyDoubleQuote] that is compiled \
+from the code located in the file called \[OpenCurlyDoubleQuote]filename.cpp\
+\[CloseCurlyDoubleQuote]"
+}], "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+   3.6994472835888367`*^9, 3.6994474621561804`*^9}, {3.6994475627583914`*^9, 
+   3.6994476671622515`*^9}, {3.69944769751033*^9, 3.699447710347049*^9}, {
+   3.6994477526517754`*^9, 3.699447774680254*^9}, {3.699448488465308*^9, 
+   3.699448491798568*^9}, {3.6994492723914394`*^9, 3.6994492759324365`*^9}, {
+   3.699449618286991*^9, 3.69944980995792*^9}, {3.699449849295945*^9, 
+   3.6994498494819884`*^9}, {3.6994499259284353`*^9, 3.699449926553073*^9}, 
+   3.699449971350457*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["4. Run", "Subsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+   3.699447233147789*^9, 3.699447239384723*^9}, {3.6994472727627287`*^9, 
+   3.6994472801564827`*^9}, {3.6994477381338587`*^9, 3.699447748916652*^9}, {
+   3.699449586824842*^9, 3.699449590204113*^9}, {3.6994499150526314`*^9, 
+   3.69944991545882*^9}, 3.6994499464151373`*^9}],
+
+Cell["Now lets run the program!", "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.6994472835888367`*^9, 3.6994474621561804`*^9}, {3.6994475627583914`*^9, 
+  3.6994476671622515`*^9}, {3.69944769751033*^9, 3.699447710347049*^9}, {
+  3.6994477526517754`*^9, 3.699447774680254*^9}, {3.699448488465308*^9, 
+  3.699448491798568*^9}, {3.6994492723914394`*^9, 3.6994492759324365`*^9}, {
+  3.699449618286991*^9, 3.6994496346300993`*^9}, {3.6994499391585712`*^9, 
+  3.6994499431754456`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Windows", "Subsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.699447233147789*^9, 3.699447239384723*^9}, {3.6994472727627287`*^9, 
+  3.6994472801564827`*^9}, {3.6994477381338587`*^9, 3.699447748916652*^9}, {
+  3.699449586824842*^9, 3.699449605237547*^9}, {3.699449832904357*^9, 
+  3.6994498374432883`*^9}}],
+
+Cell[TextData[{
+ "In Cmd, inside the folder that contains our \[OpenCurlyDoubleQuote]main.c\
+\[CloseCurlyDoubleQuote] document execute the following command.",
+ StyleBox["\na.exe",
+  FontWeight->"Bold"],
+ "\t//this will run our compiled program and hopefully print out \
+\[OpenCurlyDoubleQuote]",
+ StyleBox["Hello World!",
+  FontWeight->"Bold"],
+ "\[CloseCurlyDoubleQuote]"
+}], "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.6994472835888367`*^9, 3.6994474621561804`*^9}, {3.6994475627583914`*^9, 
+  3.6994476671622515`*^9}, {3.69944769751033*^9, 3.699447710347049*^9}, {
+  3.6994477526517754`*^9, 3.699447774680254*^9}, {3.699448488465308*^9, 
+  3.699448491798568*^9}, {3.6994492723914394`*^9, 3.6994492759324365`*^9}, {
+  3.699449618286991*^9, 3.69944980995792*^9}, {3.6994498421824503`*^9, 
+  3.699449848553585*^9}, {3.699449901366588*^9, 3.6994499021272807`*^9}, {
+  3.699449975069397*^9, 3.699450060177538*^9}, {3.6994570736267138`*^9, 
+  3.699457074294896*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Mac", "Subsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.699447233147789*^9, 3.699447239384723*^9}, {3.6994472727627287`*^9, 
+  3.6994472801564827`*^9}, {3.6994477381338587`*^9, 3.699447748916652*^9}, {
+  3.699449586824842*^9, 3.699449605237547*^9}, {3.699449832904357*^9, 
+  3.6994498374432883`*^9}, {3.6994500438120155`*^9, 3.699450044094448*^9}}],
+
+Cell[TextData[{
+ "In terminal, inside the folder that contains our \
+\[OpenCurlyDoubleQuote]main.c\[CloseCurlyDoubleQuote] document execute the \
+following command.",
+ StyleBox["\n./main.c",
+  FontWeight->"Bold"],
+ "\t//this will run our compiled program and hopefully print out \
+\[OpenCurlyDoubleQuote]",
+ StyleBox["Hello World!",
+  FontWeight->"Bold"],
+ "\[CloseCurlyDoubleQuote]"
+}], "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.6994472835888367`*^9, 3.6994474621561804`*^9}, {3.6994475627583914`*^9, 
+  3.6994476671622515`*^9}, {3.69944769751033*^9, 3.699447710347049*^9}, {
+  3.6994477526517754`*^9, 3.699447774680254*^9}, {3.699448488465308*^9, 
+  3.699448491798568*^9}, {3.6994492723914394`*^9, 3.6994492759324365`*^9}, {
+  3.699449618286991*^9, 3.69944980995792*^9}, {3.6994498421824503`*^9, 
+  3.699449848553585*^9}, {3.699449901366588*^9, 3.6994499021272807`*^9}, {
+  3.699449975069397*^9, 3.699450058266209*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["5. Complexity++", "Subsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+   3.699447233147789*^9, 3.699447239384723*^9}, {3.6994472727627287`*^9, 
+   3.6994472801564827`*^9}, {3.6994477381338587`*^9, 3.699447748916652*^9}, {
+   3.699450105038699*^9, 3.6994501121759644`*^9}, {3.6994503353360357`*^9, 
+   3.6994503389939327`*^9}, 3.6994508884170055`*^9}],
+
+Cell["\<\
+Now that we know the very basics of creating, compiling, and running a \
+program lets make a program that is more complex.\
+\>", "Text",
+ CellChangeTimes->{{3.6994454625355797`*^9, 3.699445527232362*^9}, {
+  3.6994472835888367`*^9, 3.6994474621561804`*^9}, {3.6994475627583914`*^9, 
+  3.6994476671622515`*^9}, {3.69944769751033*^9, 3.699447710347049*^9}, {
+  3.6994477526517754`*^9, 3.699447774680254*^9}, {3.699448488465308*^9, 
+  3.699448491798568*^9}, {3.6994492723914394`*^9, 3.6994492759324365`*^9}, {
+  3.6994501194257255`*^9, 3.6994501546223345`*^9}, {3.699450424032512*^9, 
+  3.6994504285225353`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["a. ", "Subsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.699447233147789*^9, 3.699447239384723*^9}, {3.6994472727627287`*^9, 
+  3.6994472801564827`*^9}, {3.6994477381338587`*^9, 3.699447748916652*^9}, {
+  3.699450105038699*^9, 3.6994501121759644`*^9}, {3.6994501677546616`*^9, 
+  3.6994501711445713`*^9}}],
+
+Cell["\<\
+create a new .cpp file, in a new folder and open it in a text editor. (the \
+same thing we did to create the hello world program)\
+\>", "Text",
+ CellChangeTimes->{{3.699449286653634*^9, 3.6994495722484665`*^9}, 
+   3.6994501162831717`*^9, {3.699450176930787*^9, 3.699450237951235*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["b. For-Loop!", "Subsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.699447233147789*^9, 3.699447239384723*^9}, {3.6994472727627287`*^9, 
+  3.6994472801564827`*^9}, {3.6994477381338587`*^9, 3.699447748916652*^9}, {
+  3.699450105038699*^9, 3.6994501121759644`*^9}, {3.6994501677546616`*^9, 
+  3.6994501711445713`*^9}, {3.699450437043645*^9, 3.699450451484583*^9}}],
+
+Cell[TextData[{
+ "#include <iostream>\nusing namespace std; \t\t\t\t//This is here so that we \
+do not need to write \[OpenCurlyDoubleQuote]std::\[CloseCurlyDoubleQuote] \
+before printing anything new, and can instead just use \
+\[OpenCurlyDoubleQuote]cout\[CloseCurlyDoubleQuote]\n \nint main ()\n {\n \t\
+for( int a = 10; a < 20; a = a + 1 ) \t\t//Starting at a=10 we iterate a once \
+every time through the loop and keep doing that as long as ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "<", "20"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ StyleBox[" \t{\n",
+  IgnoreSpellCheck->True],
+ " \t\tcout << \[OpenCurlyDoubleQuote]value of a: \[OpenCurlyDoubleQuote] << \
+a << endl; //The same print statement as last time however this time we will \
+print out a changing variable \
+\[OpenCurlyDoubleQuote]a\[CloseCurlyDoubleQuote] and at the end \n \t\t\t\t\t\
+\t\t\t//we will terminate the print line (endl) same as hitting the \
+\[OpenCurlyDoubleQuote]enter key\[CloseCurlyDoubleQuote] in a text document\n \
+  \t}\n   return 0;\n}"
+}], "Text",
+ CellChangeTimes->{{3.699449286653634*^9, 3.6994495722484665`*^9}, 
+   3.6994501162831717`*^9, {3.699450176930787*^9, 3.699450237951235*^9}, {
+   3.699450432803483*^9, 3.6994506874700947`*^9}, {3.699450878628997*^9, 
+   3.699450878786239*^9}, {3.6994509186982975`*^9, 3.699450923961376*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["c. Compile, run, and see what you get", "Subsubsection",
+ CellChangeTimes->{{3.6994454565443125`*^9, 3.699445457820145*^9}, {
+  3.699447233147789*^9, 3.699447239384723*^9}, {3.6994472727627287`*^9, 
+  3.6994472801564827`*^9}, {3.6994477381338587`*^9, 3.699447748916652*^9}, {
+  3.699450105038699*^9, 3.6994501121759644`*^9}, {3.6994501677546616`*^9, 
+  3.6994501711445713`*^9}, {3.699450714862042*^9, 3.6994507225775223`*^9}}],
+
+Cell["\<\
+create a new .cpp file, in a new folder and open it in a text editor. (the \
+same thing we did to create the hello world program)\
+\>", "Text",
+ CellChangeTimes->{{3.699449286653634*^9, 3.6994495722484665`*^9}, 
+   3.6994501162831717`*^9, {3.699450176930787*^9, 3.699450237951235*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+
+
+
+-Lolomolo\
+\>", "Section",
+ CellChangeTimes->{{3.6994454120332355`*^9, 3.699445442335306*^9}, {
+  3.6994454755214734`*^9, 3.699445477460807*^9}, {3.720180232914044*^9, 
+  3.7201802458410807`*^9}}]
+},
+WindowSize->{1520, 772},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{612, 792}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 188, 2, 70, "Section"],
+Cell[CellGroupData[{
+Cell[793, 28, 99, 1, 49, "Subsection"],
+Cell[895, 31, 310, 6, 68, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1242, 42, 251, 3, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[1518, 49, 211, 3, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[1754, 56, 282, 4, 28, "Subsubsubsection"],
+Cell[2039, 62, 235, 3, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2311, 70, 301, 4, 28, "Subsubsubsection"],
+Cell[2615, 76, 299, 5, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2951, 86, 247, 3, 28, "Subsubsubsection"],
+Cell[3201, 91, 621, 13, 144, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3859, 109, 380, 5, 28, "Subsubsubsection"],
+Cell[4242, 116, 433, 9, 87, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4712, 130, 430, 6, 28, "Subsubsubsection"],
+Cell[5145, 138, 413, 8, 87, "Text"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5619, 153, 283, 4, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[5927, 161, 211, 3, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[6163, 168, 338, 4, 28, "Subsubsubsection"],
+Cell[6504, 174, 505, 10, 87, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7046, 189, 349, 5, 28, "Subsubsubsection"],
+Cell[7398, 196, 299, 5, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7734, 206, 247, 3, 28, "Subsubsubsection"],
+Cell[7984, 211, 621, 13, 144, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8642, 229, 380, 5, 28, "Subsubsubsection"],
+Cell[9025, 236, 402, 8, 87, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9464, 249, 479, 6, 28, "Subsubsubsection"],
+Cell[9946, 257, 463, 9, 87, "Text"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10470, 273, 263, 3, 49, "Subsection"],
+Cell[10736, 278, 1818, 46, 201, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12591, 329, 254, 3, 49, "Subsection"],
+Cell[12848, 334, 501, 8, 30, "Text"],
+Cell[13352, 344, 1047, 18, 163, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14436, 367, 299, 4, 49, "Subsection"],
+Cell[14738, 373, 540, 9, 30, "Text"],
+Cell[CellGroupData[{
+Cell[15303, 386, 350, 5, 39, "Subsubsection"],
+Cell[15656, 393, 1174, 18, 49, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16867, 416, 394, 5, 39, "Subsubsection"],
+Cell[17264, 423, 1063, 18, 49, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18376, 447, 373, 5, 49, "Subsection"],
+Cell[18752, 454, 514, 7, 30, "Text"],
+Cell[CellGroupData[{
+Cell[19291, 465, 350, 5, 39, "Subsubsection"],
+Cell[19644, 472, 1001, 19, 49, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20682, 496, 394, 5, 39, "Subsubsection"],
+Cell[21079, 503, 960, 19, 49, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22088, 528, 387, 5, 49, "Subsection"],
+Cell[22478, 535, 619, 10, 30, "Text"],
+Cell[CellGroupData[{
+Cell[23122, 549, 350, 5, 39, "Subsubsection"],
+Cell[23475, 556, 295, 5, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23807, 566, 405, 5, 39, "Subsubsection"],
+Cell[24215, 573, 1357, 25, 239, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25609, 603, 432, 5, 39, "Subsubsection"],
+Cell[26044, 610, 295, 5, 30, "Text"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[26378, 620, 209, 8, 193, "Section"]
+}
+]
+*)
+
