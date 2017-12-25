@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1019463,      16961]
-NotebookOptionsPosition[   1016650,      16876]
-NotebookOutlinePosition[   1017027,      16892]
-CellTagsIndexPosition[   1016984,      16889]
+NotebookDataLength[   1019836,      16970]
+NotebookOptionsPosition[   1016979,      16884]
+NotebookOutlinePosition[   1017358,      16900]
+CellTagsIndexPosition[   1017315,      16897]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -16800,6 +16800,14 @@ QT8wAAAADg3jgQEAAHBoyMAAAAA4NGRgAAAAPF7/H+1jWOY=
  FontWeight->"Plain"],
 
 Cell["\<\
+P.S. If you are using the ESP 12 module the built-in LED is on Pin 2 instead \
+of pin one. So replace each instance of \[OpenCurlyDoubleQuote]LED_BUILTIN\
+\[CloseCurlyDoubleQuote] with \
+\[OpenCurlyDoubleQuote]2\[CloseCurlyDoubleQuote].\
+\>", "Text",
+ CellChangeTimes->{{3.723151153262504*^9, 3.723151191912093*^9}}],
+
+Cell["\<\
 Upload the sketch.
 While it is compiling quickly:
 Press S1
@@ -16875,7 +16883,7 @@ The sketch should successfully upload and the led on the board should blink\
 }, Open  ]]
 },
 WindowSize->{759, 697},
-WindowMargins->{{Automatic, 81}, {22, Automatic}},
+WindowMargins->{{Automatic, 549}, {Automatic, 138}},
 Magnification:>0.9 Inherited,
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
@@ -16919,8 +16927,8 @@ Cell[187627, 3140, 753, 16, 66, "Text"],
 Cell[188383, 3158, 238, 4, 47, "Text"],
 Cell[188624, 3164, 201, 4, 28, "Text"],
 Cell[188828, 3170, 48217, 795, 293, "Input"],
-Cell[237048, 3967, 117, 1, 28, "Text"],
-Cell[237168, 3970, 159771, 2623, 246, "Input"],
+Cell[237048, 3967, 117, 1, 25, "Text"],
+Cell[237168, 3970, 159771, 2623, 221, "Input"],
 Cell[396942, 6595, 154, 2, 28, "Text"],
 Cell[397099, 6599, 121111, 1990, 776, "Text"],
 Cell[518213, 8591, 93, 1, 28, "Text"]
@@ -16951,14 +16959,15 @@ Cell[CellGroupData[{
 Cell[943973, 15631, 262, 3, 26, "Subsubsubsubsection"],
 Cell[944238, 15636, 382, 8, 66, "Text"],
 Cell[944623, 15646, 476, 11, 28, "Text"],
-Cell[945102, 15659, 31642, 523, 478, "Input"],
+Cell[945102, 15659, 31642, 523, 468, "Input"],
 Cell[976747, 16184, 231, 5, 47, "Text"],
 Cell[976981, 16191, 16871, 281, 300, "Input"],
 Cell[993855, 16474, 216, 4, 28, "Text"],
 Cell[994074, 16480, 19163, 319, 180, "Input"],
-Cell[1013240, 16801, 217, 9, 141, "Text"],
-Cell[1013460, 16812, 2968, 53, 88, "Input"],
-Cell[1016431, 16867, 167, 3, 28, "Text"]
+Cell[1013240, 16801, 326, 6, 47, "Text"],
+Cell[1013569, 16809, 217, 9, 141, "Text"],
+Cell[1013789, 16820, 2968, 53, 88, "Input"],
+Cell[1016760, 16875, 167, 3, 28, "Text"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
